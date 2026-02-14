@@ -43,3 +43,4 @@ After training the model on 80% of the data and testing on the remaining 20%, I 
 1. **Clone the repository:**
    ```bash
    git clone <your-repo-link>
+2.You will need to download the database for it, i couldn't push the database it was to big https://www.kaggle.com/datasets/ealaxi/paysim1?resource=download
