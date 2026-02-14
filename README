@@ -1,0 +1,46 @@
+# 🍽️ Waiter Tips Prediction with Machine Learning
+
+##  Project Overview
+This project is part of the "Station Project 1: The Prediction". The goal is to build a machine learning model that predicts the amount of tips a waiter might receive based on several factors like the total bill, day of the week, gender of the payer, and more. 
+
+Predicting tips helps restaurant owners understand service quality and customer behavior, allowing for better resource management.
+
+##  Dataset Features
+The model uses the "Tips" dataset with the following columns:
+* **total_bill:** Total bill amount in dollars (including tax).
+* **tip:** Tip amount in dollars (Target variable).
+* **sex:** Gender of the person paying (Encoded: 0=Female, 1=Male).
+* **smoker:** Whether the party included smokers (Encoded: 0=No, 1=Yes).
+* **day:** Day of the week (Encoded: 0=Thur, 1=Fri, 2=Sat, 3=Sun).
+* **time:** Meal time (Encoded: 0=Lunch, 1=Dinner).
+* **size:** Number of people in the party.
+
+##  Technologies & Libraries
+* **Operating System:** Arch Linux 
+* **Language:** Python 3.14
+* **Libraries:**
+    * `Pandas` & `NumPy`: Data manipulation and cleaning.
+    * `Scikit-learn`: Model training and evaluation.
+    * `Plotly`: Interactive data visualization.
+
+##  Model Choice: DecisionTreeRegressor
+For this project, I chose the **DecisionTreeRegressor**. 
+**Why?** Unlike simple linear models, Decision Trees can capture non-linear relationships and complex patterns (e.g., "On Saturdays, smokers might tip more during dinner"). It provides a flexible way to segment data into logical branches.
+
+##  Evaluation Results
+After training the model on 80% of the data and testing on the remaining 20%, I achieved the following results:
+
+* **Mean Absolute Error (MAE):** 0.92 (approx) 
+  * *This means the model's predictions are, on average, within 92 cents of the actual tip.*
+* **Accuracy (R² Score):** [Insert your score here, e.g., 0.45]
+
+
+
+[Image of decision tree for regression]
+
+
+## How to Run the Project
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-link>
+2.You will need to download the database for it, i couldn't push the database it was to big https://www.kaggle.com/datasets/ealaxi/paysim1?resource=download
