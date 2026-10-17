@@ -1,0 +1,37 @@
+# 🛡️ Online Payments Fraud Detection
+
+## 📌 Project Overview
+Financial fraud is a multi-billion dollar problem. This project implements a **Machine Learning Classification model** to identify fraudulent transactions in real-time. Using a dataset of over 6 million transactions, the model learns to distinguish between legitimate financial activity and fraudulent patterns.
+
+## 📊 Dataset Features
+The model analyzes the following transaction attributes:
+* **Step:** Unit of time (1 step = 1 hour).
+* **Type:** Method of transaction (CASH_OUT, PAYMENT, CASH_IN, TRANSFER, DEBIT).
+* **Amount:** Total amount of the transaction.
+* **OldbalanceOrg / NewbalanceOrig:** Sender's balance before and after the transaction.
+* **OldbalanceDest / NewbalanceDest:** Recipient's balance before and after the transaction.
+* **isFraud:** Our target variable (1 = Fraud, 0 = Legitimate).
+
+## 🛠️ Technologies
+* **Environment:** Arch Linux 🐧
+* **Language:** Python 3.14
+* **Core Libraries:** * `Scikit-learn`: For the Decision Tree Classifier.
+    * `Pandas`: For data preprocessing and mapping.
+    * `Plotly`: For interactive data visualization.
+
+## 🧠 Model: Decision Tree Classifier
+For this project, I utilized the **DecisionTreeClassifier**. 
+**Why?** In fraud detection, "explainability" is key. A Decision Tree allows us to see exactly why a transaction was flagged (e.g., if a TRANSFER amount is greater than $X$ and the recipient's balance was zero). It handles the categorical nature of transaction types efficiently after mapping.
+
+
+
+## 📈 Key Findings & Results
+* **Data Imbalance:** During visualization, I discovered that fraudulent transactions represent a very small fraction (<1%) of the total data, making this a classic "imbalanced classification" problem.
+* **Model Accuracy:** The model achieved an accuracy of **[Insert your Score here, e.g., 99.9%]**.
+* **Preprocessing:** Irrelevant features like `nameOrig` and `nameDest` were dropped to prevent the model from overfitting on specific account IDs.
+
+## 🚀 How to Run
+1. **Prepare Environment (Arch Linux):**
+   ```bash
+   sudo pacman -S python-pandas python-scikit-learn python-plotly
+2.The database is to big for pushing in git so download it from this site https://www.kaggle.com/datasets/ealaxi/paysim1?resource=download and change the file name to "datasetmerd.csv"!!!
